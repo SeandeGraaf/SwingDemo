@@ -2,11 +2,13 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class HelloDemo extends JOptionPane {
+
+public class HelloDemo extends JFrame {
     private JPanel panelMain;
     private JTextField txtName;
     private JButton btnClick;
-public HelloDemo() {
+
+    public HelloDemo() {
     btnClick.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -15,15 +17,14 @@ public HelloDemo() {
     });
 }
 
-    public static void main(String[] args) {
-        HelloDemo h=new HelloDemo();
-        h.setContentpane(h.panelMain);
-        h.setTitle("Hello");
-        h.setBounds(600,200,200,200);
-        h.setSize(300,400);
-        h.setVisible(true);
-        h.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-
+public static void main(String[] args) {
+    HelloDemo h = new HelloDemo();
+    h.setContentPane (h.panelMain);  //Why don't you work?
+    h.setTitle("Hello");  //Why don't you work?
+    h.setBounds(600, 200, 200, 200);
+    h.setSize(300, 400);
+    h.setVisible(true);
+    h.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  //Why don't you work?
     }
+
 }
